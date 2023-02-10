@@ -1,0 +1,138 @@
+@font-face {
+    font-family: "Inter";
+    src: url("fonts/Inter-Light.ttf");
+    src: url("fonts/Inter-Light.ttf") format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("fonts/Inter-Regular.ttf");
+    src: url("fonts/Inter-Regular.ttf") format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("fonts/Inter-Medium.ttf");
+    src: url("fonts/Inter-Medium.ttf") format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("fonts/Inter-SemiBold.ttf");
+    src: url("fonts/Inter-SemiBold.ttf") format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("fonts/Inter-Bold.ttf");
+    src: url("fonts/Inter-Bold.ttf") format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    padding: 8px 16px;
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+#addInput {
+    border: 1px solid #eee;
+    padding: 8px 6px;
+    border-radius: 6px;
+    flex: 1;
+}
+
+#addButton {
+    background-color: #334155;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    margin-left: 8px;
+    width: 80px;
+    cursor: pointer;
+}
+
+.note-list {
+    margin-top: 12px;
+}
+
+.note-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #eee;
+}
+
+.note-row input {
+    border: none;
+    padding: 8px 6px;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.note-copy {
+    width: 26px;
+    height: 26px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background: url('icons/copy.svg') #fff no-repeat center center;
+    background-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.note-copy:hover {
+    background-color: #e2e8f0;
+}
+
+.note-copy.note-copied {
+    animation: copiedAnimation 3s linear infinite;
+}
+
+@keyframes copiedAnimation {
+    0% {
+        background-image: url('icons/tick.svg')
+    }
+    100% {
+        background-image: url('icons/tick.svg')
+    }
+}
+
+
+.note-delete {
+    width: 26px;
+    height: 26px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background: url('icons/delete.svg') #fff no-repeat center center;
+    background-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
