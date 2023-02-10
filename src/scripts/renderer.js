@@ -44,7 +44,7 @@ $(() => {
 async function readNotes() {
   const notes = await window.noteAPI.readNotes();
 
-  if (notes && typeof notes === "object" && notes.length) {
+  if (notes && typeof notes === "object") {
     $(".note-list").empty();
     notes.forEach((note, i) => {
       $(".note-list").append(noteRow(i, note));
