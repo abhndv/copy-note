@@ -8,6 +8,7 @@
     "start": "electron-forge start",
     "start:nodemon": "nodemon --exec npm start",
     "package": "electron-forge package",
+    "publish": "electron-forge publish",
     "make": "electron-forge make"
   },
   "repository": {
