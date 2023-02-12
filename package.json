@@ -1,6 +1,6 @@
 {
   "name": "copy-note",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Sticky note with a easy copy button",
   "main": "main.js",
   "scripts": {
