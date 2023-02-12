@@ -6,8 +6,9 @@ const store = new Store();
 
 const createWindow = () => {
   const win = new BrowserWindow({
-    width: 800,
-    // width: 400,
+    // width: 800,
+    width: 400,
+    minWidth:300,
     height: 800,
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
