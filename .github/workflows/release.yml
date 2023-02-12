@@ -1,0 +1,22 @@
+name: Release
+on:
+  push:
+    tags:
+      - 'v*'
+jobs:
+  release:
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+    - uses: actions/checkout@v2       
+    - uses: actions/setup-node@master
+      with:
+        node-version: 14
+    - name: Installing dependencies
+      run: npm install
+    - name: Running publish command
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: npm run publish
